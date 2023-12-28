@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="VBox_client" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.Ctrl_Client">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f2826" height="74.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
+        <Label fx:id="titre_projet_rmi" alignment="CENTER" layoutX="269.0" layoutY="11.0" style="&#10;" text="PROJET RMI" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <ListView fx:id="listes_magasin" layoutX="45.0" layoutY="100.0" prefHeight="237.0" prefWidth="200.0" />
+            <ListView fx:id="listes_banque" layoutX="411.0" layoutY="100.0" prefHeight="237.0" prefWidth="200.0" />
+            <Text layoutX="120.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Magasins" />
+            <Text layoutX="480.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banque" />
+            <Label alignment="CENTER" layoutX="290.0" layoutY="40.0" style="&#10;" text="Clients" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="131.0" layoutY="366.0" style="&#10;" text="Double-cliquer sur le magasin ou la banque de votre choix" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Text layoutX="493.0" layoutY="355.0" onMouseClicked="#Rafraichir_Banque" strokeType="OUTSIDE" strokeWidth="0.0" text="Rafraichir" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fill="WHITE" layoutX="620.0" layoutY="21.0" onMouseClicked="#fermer" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fill="WHITE" layoutX="592.0" layoutY="29.0" onMouseClicked="#reduire" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+               <font>
+                  <Font size="53.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text layoutX="120.0" layoutY="355.0" onMouseClicked="#Rafraichir_Magasin" strokeType="OUTSIDE" strokeWidth="0.0" text="Rafraichir" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

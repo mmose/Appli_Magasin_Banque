@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="437.0" style="-fx-border-color: gray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controleur.Ctrl_Client">
+  <children>
+    <AnchorPane fx:id="parent" maxHeight="-1.0" maxWidth="-1.0" onMousePressed="#deplacer_fenetre" prefHeight="398.0" prefWidth="482.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="82.0" strokeType="INSIDE" width="444.0">
+               <stroke>
+                  <LinearGradient endX="0.10952380952380958" endY="1.0" startX="0.8">
+                     <stops>
+                        <Stop color="#69c29a" />
+                        <Stop color="#0a1d1e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="0.6476190476190476" endY="1.0" startX="0.8">
+                     <stops>
+                        <Stop color="#0a0c1c" />
+                        <Stop color="#0a1b1cdf" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+        <Label alignment="CENTER" layoutX="6.0" layoutY="2.0" style="&#10;" text="PROJET RMI" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Label layoutX="7.0" layoutY="53.0" text="Connecté en tant que : " textFill="WHITE" />
+            <ListView fx:id="liste_messages" layoutX="196.0" layoutY="133.0" prefHeight="242.0" prefWidth="217.0" />
+            <Label layoutX="263.0" layoutY="110.0" text="Mes messages" />
+            <Label layoutX="283.0" layoutY="54.0" text="Port :" textFill="WHITE" />
+            <Text fill="WHITE" layoutX="418.0" layoutY="25.0" onMouseClicked="#fermer" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fill="WHITE" layoutX="392.0" layoutY="28.0" onMouseClicked="#reduire" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+               <font>
+                  <Font size="37.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Label alignment="CENTER" layoutX="112.0" layoutY="8.0" style="&#10;" text="Client Banque" textFill="#b3c4da" wrapText="false" />
+            <Text fill="WHITE" layoutX="382.0" layoutY="65.0" onMouseClicked="#rafraichir" strokeType="OUTSIDE" strokeWidth="0.0" text="Rafraichir" underline="true" />
+            <Text layoutX="40.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solde : ">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="solde" layoutX="37.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <Text fx:id="txt_client" fill="WHITE" layoutX="138.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="client">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="txt_port" fill="WHITE" layoutX="321.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="txt_banque" fill="WHITE" layoutX="217.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="banque">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
